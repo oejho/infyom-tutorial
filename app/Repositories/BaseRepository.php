@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use Illuminate\Container\Container as Application;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Facades\Auth;
 
 abstract class BaseRepository
 {
@@ -134,6 +134,7 @@ abstract class BaseRepository
     {
         $model = $this->model->newInstance($input);
 
+        $model->create_by = Auth::user()->id;
         $model->save();
 
         return $model;
