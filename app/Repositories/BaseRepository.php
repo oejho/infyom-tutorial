@@ -134,7 +134,7 @@ abstract class BaseRepository
     {
         $model = $this->model->newInstance($input);
 
-        $model->create_by = Auth::user()->id;
+        $model->created_by = Auth::user()->id;
         $model->save();
 
         return $model;
