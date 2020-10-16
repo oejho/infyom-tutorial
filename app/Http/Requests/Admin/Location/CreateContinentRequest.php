@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Location;
+namespace App\Http\Requests\Admin\Location;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\Models\Location\Continent;
@@ -28,4 +28,3 @@ class CreateContinentRequest extends FormRequest
         return Continent::$rules;
     }
 }
-

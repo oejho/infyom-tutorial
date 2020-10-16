@@ -25,3 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'location'], function () {
     Route::resource('continents', App\Http\Controllers\Location\ContinentController::class, ["as" => 'location']);
 });
+
+Route::group(['prefix' => 'admin/location'], function () {
+    Route::resource('continents', App\Http\Controllers\Admin\Location\ContinentController::class, ["as" => 'admin.location']);
+});

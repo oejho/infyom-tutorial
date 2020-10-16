@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Location;
+namespace App\Http\Requests\Admin\Location;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\Models\Location\Continent;
 
-class CreateContinentRequest extends FormRequest
+class UpdateContinentRequest extends FormRequest
 {
 
     /**
@@ -25,7 +25,8 @@ class CreateContinentRequest extends FormRequest
      */
     public function rules()
     {
-        return Continent::$rules;
+        $rules = Continent::$rules;
+
+        return $rules;
     }
 }
-
